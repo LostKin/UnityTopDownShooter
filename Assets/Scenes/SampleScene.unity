@@ -260,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1892413390123820841, guid: 139ef3cbdb1dc77278085a26d99a63b2, type: 3}
   bullet_spawn_point: {fileID: 1093507157}
+  wait_time: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +809,7 @@ MonoBehaviour:
   back_speed: 5
   hit_distance: 0.35
   jump_height: 5
+  height: 0.5
   layer:
     serializedVersion: 2
     m_Bits: 4294967295
