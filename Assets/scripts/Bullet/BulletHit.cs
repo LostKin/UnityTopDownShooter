@@ -14,6 +14,9 @@ public class BulletHit : MonoBehaviour
         if (other.tag == "Killable"){
             killable = other.gameObject;
             killable.GetComponent<KillableHealth>().health -= damage;
+        }else if (other.tag == "KillablePart"){
+            killable = other.parent;
+            killable.GetComponent<KillableHealth>().health -= damage;
         }
         if (go_through <= 0){
             Die();

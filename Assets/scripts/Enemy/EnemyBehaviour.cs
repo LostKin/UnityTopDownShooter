@@ -7,6 +7,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     Random rand = new Random();
 
+    public float sight_length;
+
     public GameObject player;
     public float reaction_time;
     public GameObject current_gun;
@@ -28,7 +30,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         float dst = Vector3.Distance(player.transform.position, transform.position);
 
-        if (dst < 1){
+        if (dst < sight_length){
             current_gun.GetComponent<GunShoot>().Shoot();
         }
 
