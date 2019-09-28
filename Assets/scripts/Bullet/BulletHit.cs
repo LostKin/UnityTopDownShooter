@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class BulletHit : MonoBehaviour
@@ -15,7 +16,7 @@ public class BulletHit : MonoBehaviour
             killable = other.gameObject;
             killable.GetComponent<KillableHealth>().health -= damage;
         }else if (other.tag == "KillablePart"){
-            killable = other.parent;
+            killable = other.gameObject.transform.parent.gameObject;
             killable.GetComponent<KillableHealth>().health -= damage;
         }
         if (go_through <= 0){

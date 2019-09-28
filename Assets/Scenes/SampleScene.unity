@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 210105898}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: KillablePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 1194838708}
   m_Layer: 0
   m_Name: PlayerHolder
-  m_TagString: Untagged
+  m_TagString: Killable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1547,6 +1547,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1194838704}
+    - target: {fileID: 9084171110886452530, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
+        type: 3}
+      propertyPath: current_gun
+      value: 
+      objectReference: {fileID: 719726917}
+    - target: {fileID: 9084171110886452530, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
+        type: 3}
+      propertyPath: sight_length
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3139383192341894331, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
         type: 3}
       propertyPath: Current_gun

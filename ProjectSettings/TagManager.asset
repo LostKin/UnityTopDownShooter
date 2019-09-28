@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Killable
+  - KillablePart
   layers:
   - Default
   - TransparentFX
