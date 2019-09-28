@@ -55,9 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Bullet\BulletHit.cs" />
      <Compile Include="Assets\scripts\Bullet\BulletMovement.cs" />
      <Compile Include="Assets\scripts\CameraAndMainGame\Cam.cs" />
      <Compile Include="Assets\scripts\Gun\GunShoot.cs" />
+     <Compile Include="Assets\scripts\Killable\KillableHealth.cs" />
      <Compile Include="Assets\scripts\Player\HandCorrecting.cs" />
      <Compile Include="Assets\scripts\Player\HoldObject.cs" />
      <Compile Include="Assets\scripts\Player\Joint.cs" />

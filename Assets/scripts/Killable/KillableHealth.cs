@@ -40,7 +40,7 @@ public class KillableHealth : MonoBehaviour{
         }
     }
 
-    void Die(){
+    public void Die(){
         Destroy(hp_bar);
         Destroy(this.gameObject);
     }
