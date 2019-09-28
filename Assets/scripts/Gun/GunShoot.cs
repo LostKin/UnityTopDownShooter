@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GunShoot : MonoBehaviour
@@ -26,6 +27,7 @@ public class GunShoot : MonoBehaviour
             cur_time = wait_time;
             Transform new_bullet = Instantiate(bullet.transform, bullet_spawn_point.transform.position, Quaternion.identity);
             new_bullet.transform.rotation = transform.rotation;
+            Console.Write(new_bullet.transform.rotation);
         }
     }
 }

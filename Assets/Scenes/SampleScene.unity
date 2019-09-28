@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55693234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024864435, y: 0.137, z: 0.31}
+  m_LocalPosition: {x: 0.024864435, y: 0.137, z: 0.418}
   m_LocalScale: {x: 0.16678, y: 0.11176, z: 0.62649}
   m_Children: []
   m_Father: {fileID: 719726919}
@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250143049}
   - component: {fileID: 250143050}
+  - component: {fileID: 250143051}
   m_Layer: 0
   m_Name: GunHolder
   m_TagString: Untagged
@@ -420,6 +421,22 @@ MonoBehaviour:
   bullet: {fileID: 1892413390123820841, guid: 139ef3cbdb1dc77278085a26d99a63b2, type: 3}
   bullet_spawn_point: {fileID: 1093507157}
   wait_time: 0.5
+--- !u!54 &250143051
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250143048}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719726919}
   - component: {fileID: 719726918}
+  - component: {fileID: 719726920}
   m_Layer: 0
   m_Name: EnemyGunHolder
   m_TagString: Untagged
@@ -560,6 +578,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -5.8640003, y: 0, z: 0}
+--- !u!54 &719726920
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719726917}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &748817314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093507157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024864435, y: 0.137, z: 0.31}
+  m_LocalPosition: {x: 0.024864435, y: 0.137, z: 0.37}
   m_LocalScale: {x: 0.16678, y: 0.11176, z: 0.62649}
   m_Children: []
   m_Father: {fileID: 250143049}
@@ -1053,6 +1087,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1128431680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128431678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e6cb8f3ddd71e14a4b7da8ae1b616c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  max_health: 100
+  hp_bar: {fileID: 1443739346}
+  height: 1
 --- !u!1 &1191980255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,10 +1281,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e6cb8f3ddd71e14a4b7da8ae1b616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
-  max_health: 500
+  health: 100
+  max_health: 100
   hp_bar: {fileID: 1613475494}
   height: 1
+--- !u!223 &1443739346 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 9084171110874372941, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 9084171109758283122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1564541660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 9084171110886452556, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Killable
+      objectReference: {fileID: 0}
     - target: {fileID: 9084171110886452557, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1562,6 +1623,12 @@ PrefabInstance:
       propertyPath: Current_gun
       value: 
       objectReference: {fileID: 719726919}
+    - target: {fileID: 9084171111460941206, guid: bfb0dfc529ab21d90bb20220fa33fa2f,
+        type: 3}
+      propertyPath: m_TagString
+      value: KillablePart
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9084171111460941205, guid: bfb0dfc529ab21d90bb20220fa33fa2f, type: 3}
+    - {fileID: 9084171111460941204, guid: bfb0dfc529ab21d90bb20220fa33fa2f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bfb0dfc529ab21d90bb20220fa33fa2f, type: 3}
