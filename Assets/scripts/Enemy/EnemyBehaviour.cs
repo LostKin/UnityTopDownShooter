@@ -16,7 +16,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Update(){
         //Facing the player
 
-        Quaternion target_rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+        Quaternion target_rotation = Quaternion.LookRotation(player.transform.position - current_gun.transform.position);
         target_rotation.x = 0;
         target_rotation.z = 0;
 
